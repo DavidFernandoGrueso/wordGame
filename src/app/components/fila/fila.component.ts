@@ -1,6 +1,5 @@
 import { Component, Input, OnInit, input } from '@angular/core';
-import { GamePage } from 'src/app/pages/game/game.page';
-import { CeldaComponent } from '../celda/celda.component';
+
 
 @Component({
   selector: 'app-fila',

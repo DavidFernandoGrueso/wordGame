@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { Component, Input, OnInit } from '@angular/core';
-import { GamePage } from 'src/app/pages/game/game.page';
-import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-celda',
