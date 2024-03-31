@@ -36,4 +36,11 @@ export class CeldaComponent  implements OnInit {
    console.log(this.opcion)
   }
 
+  onEnter(event: KeyboardEvent) {
+    if (event.key === 'Enter') {
+      this.onProbar();
+    }
+
+}
+
 }

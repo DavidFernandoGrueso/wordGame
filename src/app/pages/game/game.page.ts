@@ -42,4 +42,8 @@ export class GamePage implements OnInit {
     return 0
   }
 
+  onEnter(){
+   
+  }
+
 }

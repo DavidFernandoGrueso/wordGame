@@ -3,12 +3,13 @@
     class="custom"
     [ngClass]="{'verde': css === 'acierto', 'naranja': css === 'casi', 'rojo': css === 'fallo' }"
     [maxlength] = "1"
-    (keyup)= "onProbar()"
+    (keyup)= "onEnter($event)"
     [(ngModel)]="opcion"
-    
+
     >
 
   </ion-input>
+  <button color="sucess" (click)="onProbar()">Probar</button>
 
 
 
