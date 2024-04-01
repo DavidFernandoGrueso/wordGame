@@ -11,6 +11,8 @@ export class CeldaComponent  implements OnInit {
 
   @Input() palabra!: string
   @Input() letra!: string
+
+  @Input() palabraIn: string = '';
   public opcion: string = ""
   public css: string = ""
   constructor() { }
@@ -24,7 +26,7 @@ export class CeldaComponent  implements OnInit {
 
   onProbar(){
 
-    if(this.opcion==this.letra){
+    if(this.opcion === this.letra){
       this.css = 'acierto'
     } else {
       if(this.palabra.includes(this.opcion)){

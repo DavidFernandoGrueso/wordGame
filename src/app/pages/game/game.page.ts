@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { OnprobarService } from 'src/app/services/onprobar.service';
 
 @Component({
   selector: 'app-game',
@@ -27,7 +28,11 @@ export class GamePage implements OnInit {
 
   public palabra: string = ""
   public letras: string[] = []
-  constructor(public activedRoute: ActivatedRoute) { }
+  public fila1Completa: boolean = false;
+  public Escribir: boolean = true;
+  @Input() letrasIngresadas:string[] = []
+
+  constructor(public activedRoute: ActivatedRoute, private onprobarService: OnprobarService) { }
 
   ngOnInit() {
     this.id = this.activedRoute.snapshot.params["id"]
@@ -39,11 +44,13 @@ export class GamePage implements OnInit {
     this.letras = this.palabra.split("")
     this.palabra = this.palabra.toLowerCase();
     console.log(this.letras)
+
     return 0
   }
 
-  onEnter(){
    
-  }
 
+    onFilaCompleta(completa: boolean) {
+      this.Escribir = completa;
+    }
 }

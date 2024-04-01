@@ -1,7 +1,9 @@
 
   <ion-input
     class="custom"
-    [ngClass]="{'verde': css === 'acierto', 'naranja': css === 'casi', 'rojo': css === 'fallo' }"
+    [ngClass]="{'verde': css === 'acierto',
+                'naranja': css === 'casi',
+                'rojo': css === 'fallo' }"
     [maxlength] = "1"
     (keyup)= "onEnter($event)"
     [(ngModel)]="opcion"
